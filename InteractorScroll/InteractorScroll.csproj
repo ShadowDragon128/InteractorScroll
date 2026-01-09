@@ -27,28 +27,28 @@
 
   <ItemGroup>
     <Reference Include="0Harmony">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Resonite\MonkeyLoader\0Harmony.dll</HintPath>
-		<Private>False</Private>
+      <HintPath>$(SteamLibraryDir)\steamapps\common\Resonite\MonkeyLoader\0Harmony.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Elements.Core">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Resonite\Elements.Core.dll</HintPath>
+      <HintPath>$(SteamLibraryDir)\steamapps\common\Resonite\Elements.Core.dll</HintPath>
 		<Private>False</Private>
     </Reference>
     <Reference Include="FrooxEngine">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Resonite\FrooxEngine.dll</HintPath>
-		<Private>False</Private>
-    </Reference>
-    <Reference Include="MonkeyLoader">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Resonite\MonkeyLoader\MonkeyLoader.dll</HintPath>
+      <HintPath>$(SteamLibraryDir)\steamapps\common\Resonite\FrooxEngine.dll</HintPath>
 		<Private>False</Private>
     </Reference>
     <Reference Include="Renderite.Shared">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Resonite\Renderite.Shared.dll</HintPath>
+      <HintPath>$(SteamLibraryDir)\steamapps\common\Resonite\Renderite.Shared.dll</HintPath>
 		<Private>False</Private>
     </Reference>
     <Reference Include="ResoniteModLoader">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Resonite\Libraries\ResoniteModLoader.dll</HintPath>
+      <HintPath>$(SteamLibraryDir)\steamapps\common\Resonite\Libraries\ResoniteModLoader.dll</HintPath>
 		<Private>False</Private>
     </Reference>
   </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy /b &quot;$(OutDir)$(TargetFileName)&quot; &quot;D:\SteamLibrary\steamapps\common\Resonite\rml_mods&quot; /Y&#xD;&#xA;copy /b &quot;$(OutDir)$(TargetName).pdb&quot; &quot;D:\SteamLibrary\steamapps\common\Resonite\rml_mods&quot; /Y" />
+  </Target>
 </Project>

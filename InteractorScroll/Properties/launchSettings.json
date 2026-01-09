@@ -1,0 +1,16 @@
+{
+  "profiles": {
+    "Resonite": {
+      "commandName": "Executable",
+      "executablePath": "D:\\SteamLibrary\\steamapps\\common\\Resonite\\Renderite.Host.exe",
+      "commandLineArgs": "-verbose -Screen -DoNotAutoLoadHome -DataPath \"D:\\TempFiles\\Resonite\\Data\" -CachePath \"D:\\TempFiles\\Resonite\" -LogsPath \"D:\\TempFiles\\Resonite\\Logs\" -LoadAssembly Libraries/ResoniteModLoader.dll",
+      "workingDirectory": "D:\\SteamLibrary\\steamapps\\common\\Resonite\\"
+    },
+    "Resonite (VR)": {
+      "commandName": "Executable",
+      "executablePath": "D:\\SteamLibrary\\steamapps\\common\\Resonite\\Renderite.Host.exe",
+      "commandLineArgs": "-verbose -DoNotAutoLoadHome -DataPath \"D:\\TempFiles\\Resonite\\Data\" -CachePath \"D:\\TempFiles\\Resonite\" -LogsPath \"D:\\TempFiles\\Resonite\\Logs\" -LoadAssembly Libraries/ResoniteModLoader.dll",
+      "workingDirectory": "D:\\SteamLibrary\\steamapps\\common\\Resonite\\"
+    }
+  }
+}
