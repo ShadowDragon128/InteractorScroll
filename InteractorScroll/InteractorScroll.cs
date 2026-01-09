@@ -17,7 +17,7 @@ namespace InteractorScroll
 
         public override void OnEngineInit()
         {
-            Harmony harmony = new Harmony("usmx.ShadowAPI.InspectorScroll");
+            Harmony harmony = new Harmony("usmx.ShadowAPI.InteractorScroll");
             harmony.PatchAll();
 			config = GetConfiguration();
         }
